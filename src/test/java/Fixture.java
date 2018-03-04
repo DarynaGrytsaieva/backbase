@@ -1,6 +1,5 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Wait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import page.DatabasePage;
@@ -13,7 +12,6 @@ import java.util.Random;
 
 public class Fixture {
     public static WebDriver driver;
-    public static Wait<WebDriver> wait;
     public static DatabasePage databasePage;
     public static NewComputerPage newComputerPage;
     public static EditComputerPage editComputerPage;
@@ -40,7 +38,7 @@ public class Fixture {
     }
 
     static String randomizeName(String name) {
-        return name + " " + new Random().nextInt(1000);
+        return name + " " + (new Random().nextInt(999) + 100);
     }
 
     String parseDate(String dateStr){
