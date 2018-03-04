@@ -5,8 +5,8 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-import static org.testng.Assert.assertTrue;
 import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
 
 public class ViewDatabaseTest extends Fixture {
 
@@ -21,7 +21,6 @@ public class ViewDatabaseTest extends Fixture {
         assertFalse(databasePage.isPreviousButtonActive());
         assertTrue(databasePage.getTotalComputers() > 0);
         assertTrue(databasePage.isNextButtonActive());
-        assertTrue(databasePage.isOrderedByComputerName());
     }
 
     @Test
