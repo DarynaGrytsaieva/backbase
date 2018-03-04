@@ -11,11 +11,11 @@ import java.time.format.DateTimeFormatter;
 import java.util.Random;
 
 public class Fixture {
-    public static WebDriver driver;
-    public static DatabasePage databasePage;
-    public static NewComputerPage newComputerPage;
-    public static EditComputerPage editComputerPage;
-    public static String TEST_NAME = "Test computer";
+    private static WebDriver driver;
+    static DatabasePage databasePage;
+    static NewComputerPage newComputerPage;
+    static EditComputerPage editComputerPage;
+    static String TEST_NAME = "Test computer";
 
 
     @BeforeSuite
