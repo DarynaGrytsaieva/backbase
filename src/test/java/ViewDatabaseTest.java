@@ -105,7 +105,7 @@ public class ViewDatabaseTest extends Fixture {
         assertTrue(databasePage.isComputerFound());
         List<String> results = databasePage.getColumnValuesOnPage("Computer name");
         for (String result : results) {
-            assertTrue(result.contains(computerName));
+            assertTrue(result.toLowerCase().contains(computerName.toLowerCase()));
         }
     }
 
